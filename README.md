@@ -4,7 +4,7 @@
 <b>Víctor Comendador,</b> :arrow_right: https://github.com/victorrmtz  
 <b>Ana de Córdoba,</b> :arrow_right: https://github.com/AnadeCordoba  
 <b>Javier Inglés,</b> :arrow_right: https://github.com/Javingles  
-<b>Efrén Marrero,</b> :arrow_right: https://github.com/EFMARR 
+<b>Efrén Marrero,</b> :arrow_right: https://github.com/EFMARR  
 <b>Anghi Sánchez,</b> :arrow_right: https://github.com/AnghiSanchez   
 
 ### :notebook: Proyecto 
