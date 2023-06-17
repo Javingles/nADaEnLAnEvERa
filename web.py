@@ -24,7 +24,7 @@ model = project.version(4).model
 
 # Configurar tu clave de API de OpenAI
 gpt_key = os.getenv('gpt_key')
-openai.api_key = "gpt_key"
+openai.api_key = gpt_key
 
 @st.cache(allow_output_mutation=True)
 def load_image(image_path):
@@ -48,20 +48,23 @@ def obtener_sugerencias_recetas(etiquetas):
         engine="text-davinci-003",
         prompt=solicitud_completado,
         max_tokens=100,
-        temperature=0.7,
+        temperature=0.5,
         n=3,  # Obtener 3 sugerencias de recetas
         stop=None,
         timeout=15,
     )
-    sugerencias_recetas = [opcion['choices'][0]['text'].strip() for opcion in respuesta['choices']]
+
+    # print("respuesta: ", respuesta)
+    sugerencias_recetas = [opcion['text'].strip() for opcion in respuesta['choices']]
     return sugerencias_recetas
 
 st.set_page_config(
-    page_title='A COMER!',
+    page_title='¡A COMER!',
     page_icon="🍔",
     layout="wide",
     initial_sidebar_state="auto",
     menu_items=None)
+
 
 with st.sidebar:
     githublink = '[GitHub Repo](https://github.com/Javingles/nADaEnLAnEvERa)'
@@ -73,10 +76,12 @@ with st.sidebar:
     st.sidebar.write('Código en: ' + githublink)
 
     with st.expander('Sobre el proyecto'):
-        st.write('La idea del proyecto etc .')
-        st.write('Si quieres contribuir: ', githublink)
+        st.subheader('Idea del Proyecto')
+        st.write('¿No tienes idea de qué hacer de cena? ¿Te apetece cocinar con inteligencia artificial y redes neuronales? ¿Quieres ahorrar?')
+        st.write('Para evitar que el mundo siga desperdiciando gran parte de la producción alimentaria, mejorar el medio ambiente, la producción de gases, luchar contra el hambre y poder ahorrar. Carga una foto de tu nevera (con la puera abierta) y te convertiremos en el mejor chef.')
 
-alimentos_faltantes = []
+
+food_classes = []
 
 st.title("¿Nada en tu neverAI?")
 
@@ -94,8 +99,10 @@ if uploaded_file is not None:
     labels = prediction['predictions']
 
     label_dict = {}
+    image_classes = []
     for label in labels:
         class_name = label['class']
+        image_classes.append(class_name)
         confidence = label['confidence']
         if class_name in label_dict:
             label_dict[class_name].append(confidence)
@@ -135,17 +142,15 @@ if uploaded_file is not None:
     if falta_alimento:
         alimento_faltante = st.text_input("Escribe el alimento que falta:")
         if alimento_faltante:
-            alimentos_faltantes.append(alimento_faltante)
+            food_classes.append(alimento_faltante)
             st.success("Alimento agregado a la lista de alimentos faltantes.")
 
-    resultados_modelo = []
-
-    alimentos_faltantes.extend(resultados_modelo)
+    food_classes.extend(image_classes)
 
     if temp_file:
         os.remove(temp_file)
 
-    sugerencias = obtener_sugerencias_recetas(resultados_modelo + alimentos_faltantes)
+    sugerencias = obtener_sugerencias_recetas(food_classes)
 
     st.subheader("Sugerencias de recetas:")
     for i, sugerencia in enumerate(sugerencias):
