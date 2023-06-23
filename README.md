@@ -77,6 +77,6 @@ Y esta es la solución del trabajo realizado, hay facetas que mejorar como la pr
 - <b>Computer Vision:</b> Roboflow
 - <b>Dashboard:</b> Streamlit
 - <b>Documentación:</b> MarkDown y Swagger
-- <b>Presentación:</b> Canvas
 - <b>Control de versiones:</b> Git/GitHub
 - <b>Editores:</b> Jupyter, Visual Studio Code
+- <b>Presentación:</b> Canvas, https://www.canva.com/design/DAFl0jLhcTU/yYjR6-hPvwV59V0bPXWXmw/edit?analyticsCorrelationId=e643908b-894e-4725-b08f-bb553c4ac063
