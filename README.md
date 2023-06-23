@@ -25,7 +25,7 @@ Finalmente optamos por la primera opción que es también la que se nos proporci
 Los imágenes utilizadas han sido proporcionadas por cada uno de los integrantes del proyecto realizando los siguientes pasos:
 - Fotografiado del interior de la nevera teniendo en consideración distintos ángulos, distinta iluminación y la aproximación o no de los alimentos por baldas.
 - Creación de las etiquetas con Roboflow de cada tipo de alimento. Se empezó etiquetando cada alimento y se crearon 78 etiquetas, para mejorar el modelo y la
-precisión de este, se consideró oportuno reducir estas etiquetas a de 34.
+precisión de este, se consideró oportuno reducir estas etiquetas a 34.
 - Etiquetado de cada imagen por separado utilizando bounding boxes, al trabajar con redes neuronales convolucionales, estas se encargan de identificar los márgenes de
 cada alimento.
 - El dataset se divide en Training(70%), Validation(17%) y Testing(13%).
@@ -49,7 +49,7 @@ https://universe.roboflow.com/neveraflow/nadaenlanevera
 
 ### :loudspeaker: Streamlit
 Esta plataforma nos permite desplegar una interfaz de usuario para que éste introduzca la imagen a etiquetar. Después de realizar todo el proceso interno, que consiste en pasarle los alimentos identificados en la imagen al ChatGPT y otros que podamos rellenar a mano, esta herramienta de IA nos proporcione 3 recetas de su creación.
-Para la conexión con ChatGPT es necesaria una API key proporcionada por OpenAI al registrar una cuenta, esta se llama en el código y conecta con el modelo ‘text-davinci-003’, ajustando una creatividad de 0,7, el límite de tokens entre otros. 
+Para la conexión con ChatGPT es necesaria una API key proporcionada por OpenAI al registrar una cuenta, esta se llama en el código y conecta con el modelo ‘text-davinci-003’, ajustando una creatividad de 0.7, el límite de tokens entre otros. 
 
 ![Screenshot from 2023-06-20 16-39-29](https://github.com/Javingles/nADaEnLAnEvERa/assets/109460138/3aaee5fb-ba50-4326-898e-298ac4b9b49b)
 
