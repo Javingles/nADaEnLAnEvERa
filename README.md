@@ -8,14 +8,14 @@
 <b>Efrén Marrero,</b> :arrow_right: https://github.com/EFMARR  
 <b>Anghi Sánchez,</b> :arrow_right: https://github.com/AnghiSanchez   
 
-### :notebook: Proyecto 
-Creación de recetas con ChatGPT en base a productos alimenticios previamente detectados y clasificados con Computer Vision.  
-Teníamos varias opciones para realizar el proyecto, aquí las citamos:  
+### :dart: Proyecto y Objetivo
+Creación de recetas con ChatGPT en base a productos alimenticios previamente detectados y clasificados con Computer Vision. Con el objetivo de tener un impacto social para planificar mejor las compras, que no caduquen los alimentos y así evitar tirarlos a la basura. Pero poner el foco, sobre todo, en los más pequeños ya que estamos a la cabeza en Europa junto a Italia, Grecia y Chipre en sobrepeso y obesidad infantil. Sería un aliciente para los niños presentarles el despliegue del proyecto como un juego, para así captar su atención y hacerles participes de una dieta más sana.  
+Sopesamos varias opciones para realizar el proyecto y aquí las citamos:  
 <b>Imágenes captadas en el interior de la nevera:</b> Dificultad de visión si la nevera está muy llena.  
 <b>Imágnes captadas fuera de la nevera:</b> No resulta práctico por el motivo mencionado en la primera opción.  
 <b>Modelo OCR para los tickets de compra:</b> Diferentes tipos de tickets y posibles abreviaturas.  
 <b>Realización de un Chatbot:</b> Se puede hacer directamente en ChatGPT.  
-Finalmente optamos por la primera opción que es también la que se nos proporcionaba desde un principio.
+Finalmente optamos por la primera opción que es también la que se nos proporcionaba desde un principio. Resultó ser, en conjunto, la más práctica, viable y original.
 
 ### :factory: Funcionalidades
 - <b>Funcionalidad 1:</b> Clasificación y etiquetación de alimentos en una imagen dada.
